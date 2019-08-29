@@ -55,7 +55,7 @@ function removeFromCart(item) {
   }  
     // delete property from cart object
    var idxRemove = cart.indexOf(item);
-    // return the cart first to remove it
+    // getter call cart first to remove it
     getCart().splice(idx,1);
     
 }
