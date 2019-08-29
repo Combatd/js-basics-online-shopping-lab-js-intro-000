@@ -56,7 +56,7 @@ function removeFromCart(item) {
     // delete property from cart object
    var idxRemove = cart.indexOf(item);
     // getter call cart first to remove it
-    getCart().splice(idxRemove,1);
+    getCart().splice(idx,1);
     
 }
 
@@ -67,7 +67,7 @@ function placeOrder(cardNumber) {
   let no_card = "Sorry, we don't have a credit card on file for you.";
   cardNumber !== undefined ? result = orderPlacement : result = no_card;
   if (cardNumber !== undefined) { 
-    setCart = []; // empty the cart after order is placed
+    cart = []; // empty the cart after order is placed
   }
   return result;
 }
