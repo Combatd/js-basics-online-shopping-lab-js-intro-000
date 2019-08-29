@@ -67,7 +67,7 @@ function placeOrder(cardNumber) {
   let no_card = "Sorry, we don't have a credit card on file for you.";
   cardNumber !== undefined ? result = orderPlacement : result = no_card;
   if (cardNumber !== undefined) { 
-    cart = []; // empty the cart after order is placed
+    setCart = []; // empty the cart after order is placed
   }
   return result;
 }
