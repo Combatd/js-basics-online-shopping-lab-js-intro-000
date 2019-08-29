@@ -56,10 +56,11 @@ function removeFromCart(item) {
     // delete property from cart object
     for (var i = 0; i < cart.length; i++) {
       var ele = cart[i];
-      if (cart[i].item == cart[i].itemName) { 
+      if (ele.itemName === item) { 
         cart.splice(i , 1);
       }
     }
+    
     
 }
 
@@ -69,6 +70,8 @@ function placeOrder(cardNumber) {
   let orderPlacement = `Your total cost is $${total()}, which will be charged to the card ${cardNumber}.`;
   let no_card = "Sorry, we don't have a credit card on file for you.";
   cardNumber !== undefined ? result = orderPlacement : result = no_card;
-  cart = []; // empty the cart after order is placed
+  if (cardNumber !== undefined) { 
+    cart = []; // empty the cart after order is placed
+  }
   return result;
 }
