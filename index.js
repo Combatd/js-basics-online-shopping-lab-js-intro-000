@@ -54,13 +54,9 @@ function removeFromCart(item) {
     return "That item is not in your cart.";
   }  
     // delete property from cart object
-    for (var i = 0; i < cart.length; i++) {
-      var ele = getCart()[i];
-      if (ele.itemName === item) { 
-        cart.splice(i , 1);
-      }
-    }
-    
+   var idxRemove = cart.indexOf(item);
+    // return the cart first to remove it
+    getCart().splice(idx,1);
     
 }
 
