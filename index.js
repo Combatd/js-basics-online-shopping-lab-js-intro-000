@@ -55,7 +55,7 @@ function removeFromCart(item) {
   }  
     // delete property from cart object
     for (var i = 0; i < cart.length; i++) {
-      var ele = cart[i];
+      var ele = getCart()[i];
       if (ele.itemName === item) { 
         cart.splice(i , 1);
       }
